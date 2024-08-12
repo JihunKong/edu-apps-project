@@ -14,4 +14,4 @@ beautifulsoup4
 pinecone-client
 sentence-transformers
 openpyxl
-dotenv
+python-dotenv
