@@ -1,0 +1,13 @@
+streamlit
+openai
+pandas
+numpy
+scikit-learn
+matplotlib
+plotly
+torch
+torchvision
+opencv-python-headless
+gtts
+requests
+beautifulsoup4
