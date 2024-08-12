@@ -5,7 +5,7 @@ from openai import OpenAI
 def main():
     
     # NEIS API 키 설정
-    NEIS_API_KEY = st.secrets["neis"]
+    client = OpenAI(api_key=st.secrets["neis"])
     
     # OpenAI 클라이언트 설정
     client = OpenAI(api_key=st.secrets["openai"])
