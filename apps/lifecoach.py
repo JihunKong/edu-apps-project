@@ -9,8 +9,10 @@ import sqlite3
 import hashlib
 import random
 
-# 페이지 설정은 가장 위에서 설정
-st.set_page_config(page_title="AI 코칭 시스템", layout="wide")
+# 페이지 설정은 한 번만 수행
+if 'page_configured' not in st.session_state:
+    st.set_page_config(page_title="AI 코칭 시스템", layout="wide")
+    st.session_state.page_configured = True
 
 # 데이터베이스 연결
 conn = sqlite3.connect('users.db')
