@@ -34,7 +34,7 @@ elif app_selection == 'Grasps':
     grasps.main()
 
 elif app_selection == 'Test Feedback':
-    st.title("수행평가 피드백 시스템(예시)")
+    st.title("틀린 문제 해설 도우미(수능형)")
     import apps.test_feedback as test_feedback
     test_feedback.main()
 
@@ -49,6 +49,6 @@ elif app_selection == 'Curriculum':
     curriculum.main()
 
 elif app_selection == 'Evaluation':
-    st.title("Evaluation")
+    st.title("수행평가 피드백 시스템(예시)")
     import apps.evaluation as evaluation
     evaluation.main()
