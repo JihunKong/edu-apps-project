@@ -7,8 +7,8 @@ def main():
     def get_api_keys():
     try:
         openai_api_key = st.secrets["api_keys"]["openai"]
-        neis_api_key = st.secrets["api_keys"]["neis"]
-        return openai_api_key, neis_api_key
+        NEIS_API_KEY = st.secrets["api_keys"]["neis"]
+        return openai_api_key, NEIS_API_KEY
 
     def get_school_info(school_name):
         url = "https://open.neis.go.kr/hub/schoolInfo"
