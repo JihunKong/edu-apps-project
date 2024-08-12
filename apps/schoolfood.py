@@ -5,10 +5,10 @@ from openai import OpenAI
 def main():
     
     # NEIS API 키 설정
-    NEIS_API_KEY = st.secrets["api_keys"]["neis"]
+    NEIS_API_KEY = st.secrets["neis"]
     
     # OpenAI 클라이언트 설정
-    client = OpenAI(api_key=st.secrets["api_keys"]["openai"])
+    client = OpenAI(api_key=st.secrets["openai"])
     
     def get_school_info(school_name):
         url = "https://open.neis.go.kr/hub/schoolInfo"
