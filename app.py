@@ -40,7 +40,7 @@ elif app_selection == 'Test Feedback':
 
 elif app_selection == 'Student Record Enhancement System':
     st.title("생기부 업그레이드")
-    import apps.record-enhancement as student_record_enhancement
+    import apps.record_enhancement as student_record_enhancement
     student_record_enhancement.main()
 
 elif app_selection == 'Curriculum':
