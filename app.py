@@ -15,7 +15,7 @@ if app_selection == 'Life Coach':
 
 elif app_selection == 'Ethical Dilemma System':
     st.title("윤리적 딜레마 토론")
-    import apps.ethical-dilemma-system-main as ethical_dilemma_system
+    import apps.ethical_dilemma_system_main as ethical_dilemma_system
     ethical_dilemma_system.main()
 
 elif app_selection == 'School Food':
