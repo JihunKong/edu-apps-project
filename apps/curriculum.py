@@ -6,7 +6,7 @@ from openai import OpenAI
 
 def main():
     # OpenAI 클라이언트 설정
-    openai.api_key = st.secrets["openai"]["api_key"]
+    client = OpenAI(api_key=st.secrets["openai"]["api_key"])
 
     # 2022 개정 국어과 교육과정 내용 영역
     content_areas = {
