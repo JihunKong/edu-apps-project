@@ -9,10 +9,14 @@ import sqlite3
 import hashlib
 import random
 
-# 페이지 설정은 한 번만 수행
 if 'page_configured' not in st.session_state:
     st.set_page_config(page_title="AI 코칭 시스템", layout="wide")
     st.session_state.page_configured = True
+
+def main():
+    # 데이터베이스 연결
+    conn = sqlite3.connect('users.db')
+    c = conn.cursor()
 
 # 데이터베이스 연결
 conn = sqlite3.connect('users.db')
@@ -23,16 +27,8 @@ c.execute('''CREATE TABLE IF NOT EXISTS users
              (id INTEGER PRIMARY KEY, username TEXT UNIQUE, password TEXT)''')
 
 # OpenAI 클라이언트 초기화
-@st.cache_resource
-def init_openai():
-    try:
-        openai.api_key = st.secrets["openai"]["api_key"]
-        return openai
-    except Exception as e:
-        st.error(f"OpenAI 클라이언트 초기화 실패: {str(e)}")
-        raise
+client = openai.OpenAI(api_key=st.secrets["api_keys"]["openai"])
 
-client = init_openai()
 
 # Pinecone 초기화
 @st.cache_resource
