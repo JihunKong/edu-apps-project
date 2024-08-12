@@ -15,7 +15,7 @@ def main():
     load_dotenv(env_path)
     
     # OpenAI API 키 설정
-    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    client = OpenAI(api_key=st.secrets["openai"]["api_key"])
     
     def generate_response(messages):
         try:
